@@ -1,31 +1,17 @@
-let altura = prompt("Ingresa tu altura: ")
-let peso = prompt("Ingresa tu peso: ")
+let altura = prompt("Ingresa tu altura: (ej: 1.70) ")
+let peso = prompt("Ingresa tu peso: (ej: 70.0) ")
 
-let alturan = parseInt(altura)
-let peson = parseInt(peso)
+let alturan = parseFloat(altura)
+let peson = parseFloat(peso)
 
 let IMC = peson / (alturan * alturan)
 
-
-switch(IMC){
-    case 1:
-        IMC < 18.5;
-        res = "Bajo peso";
-        break;
-    case 2:
-        18.5 <= IMC && IMC < 24.9;
-        res = "Peso normal";
-        break;
-    case 3:
-        24.9 <= IMC && IMC < 29.9;
-        res = "Sobrepeso";
-        break;
-    default:
-        IMC >= 30
-        res = "Obesidad";
-}
-
-
-let res;
-
-console.log(IMC)
+  if (IMC < 18.5) {
+    console.log("Bajo peso");
+  } else if (IMC >= 18.5 && IMC < 24.9) {
+    console.log("Peso normal");
+  } else if (IMC >= 24.9 && IMC < 29.9) {
+    console.log("Sobrepeso");
+  } else {
+    console.log("Obesidad");
+  }
